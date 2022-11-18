@@ -8,13 +8,17 @@ typedef struct n{
 
 node* temp;
 
-void print_list(node* t)
+// **
+// * this code prints the contents of the linked list for
+// * testing purpose    
+//
+void print_linked_list(node* t)
 {
     // prints the list
     if(t!=NULL)
     {
         cout<<t->a<<" ";
-        print_list(t->next);
+        print_linked_list(t->next);
     }
     return;
 }
@@ -93,7 +97,7 @@ int main()
     t->next=temp;
     temp=t;
     
-    print_list(temp); // call to print funtion
+    print_linked_list(temp); // call to print funtion
 
     return 0;
 }
